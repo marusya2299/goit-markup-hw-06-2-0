@@ -22,23 +22,61 @@ img{
     height: auto;
 }
 
+/*Container*/
 .container {
-    width: 1158px;
-    padding-left: 15px;
-    padding-right: 15px;
+    max-width: 320px;
+    
+    padding-left: 16px;
+    padding-right: 16px;
     margin-left: auto;
     margin-right: auto;
 }
 
+
+/*Deckstop devices*/
+@media only screen and (miv-width: 1158px) {
+    .container {
+        max-width: 1158px;
+
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    /*h1*/
+    .page-title {
+        margin-bottom: 48px;
+    }
+
+}
+
+/*Tablet devices*/
+@media only screen and (miv-width: 768px) {
+    .container {
+        max-width: 768px;
+    }
+
+    /*h1*/
+    .page-title {
+        font-size: 56px;
+        line-height: 1.07;
+
+        margin-bottom: 36px;
+        max-width: 496px;
+    }
+
+}
+
+/*Mobile devices*/
 /*h1*/
 .page-title {
-    font-size: 56px;
+    font-size: 36px;
     font-weight: 700;
-    line-height: 1.07;
+    line-height: 1.1;
     letter-spacing: 0.02em;
     text-align: center;
-    margin-bottom: 48px;
-    max-width: 496px;
+
+    margin-bottom: 72px;
+    max-width: 288px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -70,6 +108,22 @@ img{
     color: #434455;
 }
 
+
+/*Header Tablet devices*/
+
+/*Tablet devices*/
+@media only screen and (miv-width: 768px) {
+    .navi-logo {
+        margin-right: 120px;
+    }
+
+    .address .flex-container-one{
+        display: flex;
+        text-decoration: column;
+        gap: 12px;
+    }
+
+}
  /*Header */
 
  .head {
@@ -159,21 +213,40 @@ img{
 
  /*Section 1*/
 
- .section-one{
-    color: #FFFFFF;
-    background-color: #2E2F42;
-    padding-top: 188px;
-    padding-bottom: 188px;
-    background-image: linear-gradient(to bottom,
-    rgba(46, 47, 66, 0.7),
-    rgba(46, 47, 66, 0.7)),
-    url(../images/people-office.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    max-width: 1440px;
-    margin: 0 auto;
+ /*Deckstop devices*/
+ @media only screen and (miv-width: 1158px) {
+     .section-one {
+         max-width: 1440px;
+         padding-top: 188px;
+         padding-bottom: 188px;
+     }
  }
+
+ /*Tablet devices*/
+ @media only screen and (miv-width: 768px) {
+     .section-one {
+        max-width: 768px;
+        padding-top: 112px;
+        padding-bottom: 112px;
+     }
+ }
+
+ /*Mobile devices*/
+  .section-one {
+      color: #FFFFFF;
+      background-color: #2E2F42;
+      padding-top: 72px;
+      padding-bottom: 72px;
+      background-image: linear-gradient(to bottom,
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)),
+        url(../images/people-office.jpg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      max-width: 320px;
+      margin: 0 auto;
+  }
 
  .button{
     color: currentColor;
@@ -198,20 +271,73 @@ img{
     background-color: #404BBF;
  }
 
+
 /*Section's 2-3-4*/
 
 .section-two,
 .section-three,
 .section-four {
-    padding-top: 120px;
-    padding-bottom: 120px;
+    padding-top: 96px;
+    padding-bottom: 96px;
 }
 
 .list{
     list-style-type: none;
 }
 
+/*Deckstop devices*/
+@media only screen and (miv-width: 1158px) {
+    .section-one {
+        max-width: 1440px;
+        padding-top: 188px;
+        padding-bottom: 188px;
+    }
+
+    .section-two,
+    .section-three,
+    .section-four{
+        padding-top: 120;
+        padding-bottom: 120px;
+    }
+}
+
+/*Tablet devices*/
+@media only screen and (miv-width: 768px) {
+    .section-one {
+        max-width: 768px;
+    }
+}
+
 /*Section 2*/
+
+@media only screen and (miv-width: 1158px) {
+    .flex-container-two {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 24px;
+    }
+
+    .icon-block {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 112px;
+        border: 1px solid #8E8F99;
+        border-radius: 4px;
+        background-color: #F4F4FD;
+        margin-bottom: 8px;
+    }
+}
+
+/*Tablet devices*/
+@media only screen and (miv-width: 768px) {
+    .section-two .flex-card {
+
+    }
+}
+
+/*Mobile devices*/
 .section-two .flex-card {
     width: calc((100% - 72px) / 4);
 }
@@ -231,20 +357,15 @@ img{
 
 .flex-container-two {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    gap: 72px;
+    align-items: center;
     justify-content: center;
-    gap: 24px;
 }
 
+
 .icon-block{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 112px;
-    border: 1px solid #8E8F99;
-    border-radius: 4px;
-    background-color: #F4F4FD;
-    margin-bottom: 8px;
+    display: none;
 }
 
 /*Section 3*/
